@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {
+  margin: 0;
+  font-color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: E4D605;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+  font-size:20px
+  }
+  
+  .rcycle {
+  -webkit-transform:rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">About Moi! ♥</a></li>
+  <li><a href="#news">Projects! ✎</a></li>
+  <li><a href="#contact">The real me! ♛ </a></li>
+  
+</ul>
+<div class = "tabs">
+<div id = "home" class = "w3-animate-opacity" style="margin-left:15%;padding:1px 16px;height:1000px; background-image: url(about_me.jpg); background-size: 100% 100%;"  >
+</div>
+<div class = "tabs">
+<div id = "news" class = "w3-animate-opacity" style="margin-left:15%;padding:1px 16px;height:1000px; background-image: url(picp.png); background-size: 100% 100%;"  >
+</div>
+<div class = "tabs">
+
+   
+
+
+</div>
+</body>
+
+<footer>
+  <p align = "right">Posted by: Arushi Gangola</p>
+  <p align = "right">Contact information: <a href="mailto:agongala.25@gmail.com">
+  agongala.25@gmail.com</a>.</p>
+</footer
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+             <script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e) {
+        var currentAttrValue = jQuery(this).attr('href');
+
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+        e.preventDefault();
+    });
+});
+</script>
+</html>

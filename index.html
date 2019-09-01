@@ -1,0 +1,107 @@
+<html>
+<title> My Page </title>
+<head>
+<style>
+ body {
+ 
+  font-family: "Times New Roman", Times, serif;
+  color: purple;
+  text-align: middle;
+  font-size: 20;
+  font-weight: bold;
+  letter-spacing: 3;
+}
+
+#col-1 {
+  position: relative;
+  width: 60%;
+  float: left;
+  height: 100%;
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+  background-size: 60% 100%;
+  z-index: 1010101010
+}
+
+#col-2 {
+  position: relative;
+  width: 40%;
+  float: left;
+  height: 100%;
+ background-image: url("bg1.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+ background-attachment: fixed; 
+  z-index: 1010101010
+}
+ .p{
+    margin-left: 30px;
+	}
+
+.box {
+  position:relative;
+  vertical-align: middle;
+  color: black;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  transition: 0.5s;
+  padding: 0 20px;
+  cursor: pointer;
+  border: 3px solid rgb(105,105,105);
+  -webkit-transition:0.5s;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  text-shadow: 1px 1px;
+}
+
+.box:hover {
+  border: 2px solid rgb(105,105,105);
+  color: black;
+}
+  
+
+</style>
+<head>
+<body> 
+<div id = "col-1">
+ <a href = "web2.html">
+  <img src="preview.jpg" width ="300" height = "450" align = "middle" hspace="220" vspace="30">  
+ </a>
+</div>
+
+<div id = "col-2">
+<button onclick="typeWriter()"  class = "box"  style="background-color: DE94E0 ;margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%;font-size=30px;border:"> Hello !? </button>
+
+ <p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'Hello! I am Arushi Gangola. I see you are bored ,try clicking on my pretty :) face! ';
+var speed = 70;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+  
+  
+  
+}
+document.getElementById("demo").style.fontFamily = "Lucida Console"; 
+
+
+
+</script>
+
+
+
+</div>
+
+ </body>
